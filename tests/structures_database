@@ -1,0 +1,15 @@
+C14     MgZn2   hP12   C14   P63/mmc   194  3   4f  4   2a  2   6h  6         
+C15     Cu2Mg   cF24   C15   Fd3m      227  2   16d 4   8a  2   
+C36     MgNi2   hP24   C36   P63/mmc   194  5   4e  4   4f  4   4f2  4   6g   6   6h   6
+A15     Cr3Si   cP8    A15   Pm-3n     223  2   6c  6   2a  2
+chi     αMn     cI58   A12   I-43m     217  4   2a  1   8c  4   24g1 12  24g2 12
+mu      Fe7W6   hR13   D8_5  R-3m      166  5   1a  1   6h  6   2c1  2   2c2  2   2c3  2   
+sigma   CrFe    tP30   D8_h  P4_2/mnm  136  5   2a  2   4f  4   8i1  8   8i2  8   8j   8 
+fcc     X       X      X     X         0    4   x   .25 x  .25  x   .25 x  .25 
+bcc     X       X      X     X         0    4   x   .25 x  .25  x   .25 x  .25 
+hcp     X       X      X     X         0    4   x   .25 x  .25  x   .25 x  .25 
+Al12W   X       X      X     X         0    2   x   2   x  24   
+Al4W    X       X      X     X         0    2   x   6   x  24   
+Al5W    X       X      X     X         0    4   x   2   x  2  x   2   x  6 
+Al5Co2  X       X      X     X         0    5   x   2   x  2  x   6   x  6  x  12
+Al9Co2  X       X      X     X         0    6   x   4   x  4  x   4   x  4  x  4  x  2

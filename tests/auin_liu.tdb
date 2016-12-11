@@ -1,0 +1,161 @@
+$ AUIN
+$ -----------------------------------------------------------------------------
+$ 2010.10.5
+$ 
+$ TDB file created by K.Hashimoto, T.Abe, and Y.Sawada
+$
+$ Particle Simulation and Thermodynamics Group, National Institute for 
+$ Materials Science. 1-2-1 Sengen, Tsukuba, Ibaraki 305-0047, Japan
+$ 
+$ e-mail: abe.taichi@nims.go.jp
+$
+$ Copyright (C) NIMS 2010
+$ -----------------------------------------------------------------------------
+$
+$ The parameter set is taken from
+$  Thermodynamic Reassessment of the Au-In Binary System. 
+$  H.S.Liu, Y.Cui, K.Ishida, Z.P.Jin, CALPHAD, 27 (2003) 27-37.
+$
+$ -----------------------------------------------------------------------------
+$
+ ELEMENT /-   ELECTRON_GAS              0.0000E+00  0.0000E+00  0.0000E+00!
+ ELEMENT VA   VACUUM                    0.0000E+00  0.0000E+00  0.0000E+00!
+ ELEMENT AU   FCC_A1                    1.9697E+02  6.0166E+03  4.7488E+01!
+ ELEMENT IN   TETRAGONAL_A6             1.1482E+02  6.6100E+03  5.7650E+01!
+$ 
+$ ------------------------------------------------------------------------------
+$
+ FUNCTION GHSERAU    298.15  -6938.853+106.830495*T-22.75455*T*LN(T)
+    -.00385924*T**2+3.79625E-07*T**3-25097*T**(-1);                  933.51  Y
+    -93575.261+1021.60143*T-155.6947*T*LN(T)+.08756015*T**2
+    -1.1518713E-05*T**3+10637210*T**(-1);                           1337.58  Y
+    +314062.987-2016.37379*T+263.2523*T*LN(T)-.11821685*T**2
+    +8.923845E-06*T**3-67999850*T**(-1);                            1735.80  Y
+    -12138.657+165.277268*T-30.9616*T*LN(T);                           3200  N !
+ FUNCTION GAULIQ     298.15  +12552-9.38411*T+GHSERAU#;                3200  N !
+ FUNCTION GAUHCP     298.15  +240.75+1.6*T+GHSERAU#;                   3200  N !
+
+ FUNCTION GHSERIN    298.150  -6978.89+92.338115*T-21.8386*T*LN(T)
+     -.00572566*T**2-2.120321E-06*T**3-22906*T**(-1);                429.78  Y
+     -7033.47+124.476492*T-27.4562*T*LN(T)+5.4607E-04*T**2-8.367E-08*T**3
+     -211708*T**(-1)+3.30026E+22*T**(-9);                              3800  N !
+ FUNCTION GINLIQ     298.150  +3282.152-7.63649*T
+     -5.21918E-20*T**7+GHSERIN#;  4.29780E+02  Y
+     +3283.66-7.640174*T-3.30026E+22*T**(-9)+GHSERIN#;                 3800  N !
+ FUNCTION GINHCP     298.15   +533-.6868*T+GHSERIN#;                   3800  N !
+ FUNCTION GINFCC    298.15  +123-.1988*T+GHSERIN#;                     3800  N !
+
+$------------------------------------------------------------------------------- 
+ TYPE_DEFINITION % SEQ *!
+ DEFINE_SYSTEM_DEFAULT ELEMENT 2 !
+ DEFAULT_COMMAND DEF_SYS_ELEMENT VA /- !
+
+$------------------------------------------------------------------------------- 
+$ PARAMETERS FOR LIQUID PHASE
+$-------------------------------------------------------------------------------
+ PHASE LIQUID:L %  1  1.0  !
+    CONSTITUENT LIQUID:L :AU,IN :  !
+   PARAMETER G(LIQUID,AU;0)   298.15  +GAULIQ#;                        3200  N !
+   PARAMETER G(LIQUID,IN;0)   298.15  +GINLIQ#;                        3800  N !
+   PARAMETER G(LIQUID,AU,IN;0) 298.15  -76196.19+64.2914*T-6.6375*T*LN(T);  
+                                                                       6000  N !
+   PARAMETER G(LIQUID,AU,IN;1) 298.15  -31134.02+81.3582*T-8.5134*T*LN(T);  
+                                                                       6000  N !
+
+$------------------------------------------------------------------------------- 
+$ PARAMETERS FOR FCC_A1
+$-------------------------------------------------------------------------------
+ TYPE_DEFINITION ' GES A_P_D FCC_A1 MAGNETIC  -3.0    2.80000E-01 !
+ PHASE FCC_A1  %'  2 1   1 !
+    CONSTITUENT FCC_A1  :AU%,IN : VA% :  !
+  PARAMETER G(FCC_A1,AU:VA;0)        298.15  +GHSERAU#;                4000  N !
+  PARAMETER G(FCC_A1,IN:VA;0)        298.15  +GINFCC#;                 3800  N !
+  PARAMETER G(FCC_A1,AU,IN:VA;0)     298.15  -48493.65+46.6237*T-6.8308*T*LN(T);
+                                                                       6000  N !
+  PARAMETER G(FCC_A1,AU,IN:VA;1)     298.15  +498.45;                  6000  N !
+  
+$-------------------------------------------------------------------------------
+$ PARAMETERS FOR Éø_1
+$-------------------------------------------------------------------------------
+ PHASE alpha  %  1 1.0 !
+    CONSTITUENT alpha :AU,IN :  !
+  PARAMETER G(alpha,AU;0)  298.15 +125.0+0.79*T +GHSERAU#;             4000  N !
+  PARAMETER G(alpha,IN;0)  298.15 +520-0.384*T+GHSERIN#;               3800  N !
+  PARAMETER G(alpha,AU,IN;0)  298.15  -48238.66+5.3551*T;              6000  N !
+  PARAMETER G(alpha,AU,IN;1)  298.15  -48.36-16.7932*T;                6000  N !
+   
+$------------------------------------------------------------------------------- 
+$ PARAMETERS FOR HCP
+$-------------------------------------------------------------------------------
+ TYPE_DEFINITION ( GES A_P_D HCP_A3 MAGNETIC  -3.0    2.80000E-01 !
+ PHASE HCP_A3  %(  2 1   .5 !
+    CONSTITUENT HCP_A3  :AU,IN : VA% :  !
+   PARAMETER G(HCP_A3,AU:VA;0)  298.15  +GAUHCP#;                      3200  N !
+   PARAMETER G(HCP_A3,IN:VA;0)  298.15  +GINHCP#;                      3800  N !
+   PARAMETER G(HCP_A3,AU,IN:VA;0)  298.15  -55780.55+13.8198*T;        6000  N !
+   PARAMETER G(HCP_A3,AU,IN:VA;1)  298.15  +6788.95-32.893*T;          6000  N !
+
+$-------------------------------------------------------------------------------
+$ PARAMETERS FOR É¡
+$-------------------------------------------------------------------------------
+ PHASE gamma %  3  0.69231  0.23077  0.07692 !
+    CONSTITUENT gamma :AU :AU,IN :IN :  !
+  PARAMETER G(gamma,AU:AU:IN;0)  298.15 +0.92308*GHSERAU#+0.07692*GHSERIN# 
+            -2830.47-2.5191*T;                                         6000  N !
+  PARAMETER G(gamma,AU:IN:IN;0)  298.15 +0.69231*GHSERAU#+0.30769*GHSERIN#
+            -11992.16-3.6511*T;                                        6000  N !
+  PARAMETER G(gamma,AU:AU,IN:IN;0)  298.15  +2144.6;                   6000  N !
+
+$-------------------------------------------------------------------------------
+$ PARAMETERS FOR É’
+$-------------------------------------------------------------------------------
+ PHASE psi %   3  0.5  0.33333  0.16667 !
+    CONSTITUENT psi :AU :AU,IN :IN :  !
+  PARAMETER G(psi,AU:AU:IN;0)  298.15 +0.83333*GHSERAU#+0.16667*GHSERIN# 
+            +2153.38-8.039*T;                                          6000  N !
+  PARAMETER G(psi,AU:IN:IN;0)  298.15 +0.5*GHSERAU#+0.5*GHSERIN#
+            -18225.14+3.0*T;                                           6000  N !
+  PARAMETER G(psi,AU:AU,IN:IN;0)  298.15  -15683.16;                   6000  N !
+
+$-------------------------------------------------------------------------------
+$ PARAMETERS FOR  intermetaric compounds
+$-------------------------------------------------------------------------------
+ PHASE beta  %  2 .785  .215 !
+  CONSTITUENT beta  : AU : IN : !
+  PARAMETER G(beta,AU:IN;0)    298.15  +0.785*GHSERAU#+0.215*GHSERIN#
+             -8980.42-3.3042*T;                                        6000  N !
+
+ PHASE beta_1 %  2 .77778  .22222 !
+  CONSTITUENT beta_1  : AU : IN : !
+  PARAMETER G(beta_1,AU:IN;0)    298.15  +0.77778*GHSERAU#+0.22222*GHSERIN#
+             -9382.52-3.1015*T;                                        6000  N !
+
+ PHASE AU3IN %  2 .75  .25 !
+  CONSTITUENT AU3IN  : AU : IN : !
+  PARAMETER G(AU3IN,AU:IN;0)    298.15  +0.75*GHSERAU#+0.25*GHSERIN#
+             -10582.67-2.9323*T;                                       6000  N !
+
+ PHASE gamma_1 %  2 .7  .3 !
+  CONSTITUENT gamma_1  : AU : IN : !
+  PARAMETER G(gamma_1,AU:IN;0)    298.15  +0.7*GHSERAU#+0.3*GHSERIN#
+             -12813.11-2.0538*T;                                       6000  N !
+
+ PHASE AUIN %  2 .5  .5 !
+  CONSTITUENT AUIN  : AU : IN : !
+  PARAMETER G(AUIN,AU:IN;0)    298.15  +0.5*GHSERAU#+0.5*GHSERIN#
+             -20188.37+2.3786*T;                                       6000  N !
+
+
+ PHASE AUIN2 %  2 .33333  .66667 !
+  CONSTITUENT AUIN2  : AU : IN : !
+  PARAMETER G(AUIN2,AU:IN;0)    298.15  +0.33333*GHSERAU#+0.66667*GHSERIN#
+             -26129.06+11.1133*T;                                      6000  N !
+
+$------------------------------------------------------------------------------- 
+$ PARAMETERS FOR TETRAGONAL_A6 
+$-------------------------------------------------------------------------------
+ PHASE TETRAGONAL_A6  %  1  1.0  !
+   CONSTITUENT TETRAGONAL_A6  :IN% :  !
+   PARAMETER G(TETRAGONAL_A6,IN;0)  298.15  +GHSERIN#;                 3800  N !
+ 
+$AUIN
