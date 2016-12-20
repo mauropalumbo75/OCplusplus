@@ -6,7 +6,7 @@
  */
 
 #include <cstdlib>
-#include "tpfunctions.h"
+#include "../include/tpfunctions.h"
 
 using namespace std;
 
@@ -64,8 +64,8 @@ int main(int argc, char** argv) {
 //      cout<<list.get_expression("GHSERTI",1,1)<<endl;
       
       cout<<"\n"<<list.get("ALPHA").name()<<" (T="<<2<<",P="<<4<<")= "<<list.calc("ALPHA",100000,4)<<endl;
-//      cout<<"\nDerivative: "<<list.get("GHSERTi").name()<<" (T="<<2<<",P="<<4<<")= "<<list.calc("CALCULATE GHSERTi 2 4 T 1")<<endl;
-//      cout<<"\nFunction: "<<list.get("wrong").name()<<" (T="<<2<<",P="<<4<<")= "<<list.calc("CALCULATE wrong 2 4 T 1")<<endl;
+      cout<<"\nDerivative: "<<list.get("GHSERTi").name()<<" (T="<<2<<",P="<<4<<")= "<<list.calc("CALCULATE GHSERTi 2 4 T 1")<<endl;
+      cout<<"\nFunction: "<<list.get("wrong").name()<<" (T="<<2<<",P="<<4<<")= "<<list.calc("CALCULATE wrong 2 4 T 1")<<endl;
       cout<<"\n"<<list.get("wrong").name()<<" (T="<<2<<",P="<<4<<")= "<<list.calc("wrong",1,4)<<endl;
       
     }

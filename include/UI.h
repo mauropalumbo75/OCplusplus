@@ -25,8 +25,8 @@
 #include <string>
 #include <iostream>
 #include <sstream>
-#include "../commoninclude/utils.h"
-#include "../systems/systems.h"
+#include "utils.h"
+#include "systems.h"
 
 using namespace std;
 

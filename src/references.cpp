@@ -5,7 +5,7 @@
  * Created on February 12, 2015, 2:26 PM
  */
 
-#include "references.h"
+#include "../include/references.h"
 
 
 Reference::Reference(string refall)

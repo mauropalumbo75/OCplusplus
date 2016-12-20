@@ -18,17 +18,16 @@
 #include <vector>
 #include <set>
 #include <map>
-#include "../commoninclude/utils.h"
-#include "../commoninclude/math_utils.h"
-#include "../commoninclude/physconsts.h"
-#include "../elements/elements.h"
-#include "../structures/structure.h"
-#include "../TPfunctions/tpfunctions.h"
-#include "../Types/types.h"
-#include "../Y/y.h"
-#include "../Configurations/configuration.h"
-#include "../magnetic_contribution/magnetic.h"
-#include "../vibrations/vibrations.h"
+#include "utils.h"
+#include "math_utils.h"
+#include "physconsts.h"
+#include "elements.h"
+#include "structure.h"
+#include "tpfunctions.h"
+#include "types.h"
+#include "y.h"
+#include "configuration.h"
+#include "magnetic.h"
 
 struct too_many_or_too_few_components {};
 struct no_such_element_in_phase {};

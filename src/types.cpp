@@ -6,7 +6,7 @@
  * 
  */
 
-#include "types.h"
+#include "../include/types.h"
 
 
 // Most used constructor, expand on an input string

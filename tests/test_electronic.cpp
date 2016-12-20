@@ -6,7 +6,7 @@
  */
 
 #include <cstdlib>
-#include "electronic.h"
+#include "../include/electronic.h"
 
 using namespace std;
 

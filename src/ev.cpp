@@ -5,7 +5,7 @@
  * Created on 27 April 2015, 13:33
  */
 
-#include "ev.h"
+#include "../include/ev.h"
 #include <iostream>
 
 ////////////////////////////////////////////////////////////////////////////////

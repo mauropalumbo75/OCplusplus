@@ -11,9 +11,9 @@
 #ifndef MAGNETIC_H
 #define	MAGNETIC_H
 
-#include "../commoninclude/utils.h"
-#include "../commoninclude/math_utils.h"
-#include "../commoninclude/physconsts.h"
+#include "utils.h"
+#include "math_utils.h"
+#include "physconsts.h"
 
 // Magnetic functions as in the Inden-Jarl model
 // TC is the Curie temperature, B0 the Bohr magneton, p and D are parameters of the model

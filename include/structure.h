@@ -20,8 +20,8 @@
 #include <set>
 #include <iostream>
 #include <fstream>
-#include "../commoninclude/utils.h"
-#include "../commoninclude/math_utils.h"
+#include "utils.h"
+#include "math_utils.h"
 
 
 class Vect3D  {

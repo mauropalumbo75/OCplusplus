@@ -7,8 +7,8 @@
 
 #include <cstdlib>
 #include <vector>
-#include "readabinitio.h"
-#include "../structures/structure.h"
+#include "../include/readabinitio.h"
+#include "../include/structure.h"
 
 using namespace std;
 

@@ -5,7 +5,7 @@
  * Created on 10 May 2015, 19:10
  */
 
-#include "electronic.h"
+#include "../include/electronic.h"
 
 EDOS::EDOS(string name, string e_unit, int nat, int nel, bool mag, DP ef, string fname)
 {    

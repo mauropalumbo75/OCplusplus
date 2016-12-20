@@ -5,7 +5,7 @@
  * Created on 03 May 2015, 18:13
  */
 
-#include "harmonic.h"
+#include "../include/harmonic.h"
 
 
 PDOS::PDOS(string name, string e_unit, int nat, string fname)

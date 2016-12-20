@@ -29,9 +29,9 @@
 #include <iomanip>
 #include <vector>
 #include <set>
-#include "../commoninclude/physconsts.h"
-#include "../commoninclude/math_utils.h"
-#include "../commoninclude/utils.h"
+#include "physconsts.h"
+#include "math_utils.h"
+#include "utils.h"
 
 class PDOS {
 public:

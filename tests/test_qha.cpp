@@ -6,8 +6,8 @@
  */
 
 #include <cstdlib>
-#include "qha.h"
-#include "fv.h"
+#include "../include/qha.h"
+#include "../include/fv.h"
 
 using namespace std;
 

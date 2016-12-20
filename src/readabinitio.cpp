@@ -5,7 +5,7 @@
  * Created on June 15, 2014, 8:52 PM
  */
 
-#include "readabinitio.h"
+#include "../include/readabinitio.h"
 #include <map>
 
 bool is_in_flip(int k,vector<int> flip)

@@ -8,8 +8,8 @@
 #include <cstdlib>
 #include <vector>
 #include <iostream>
-#include "ev.h"
-#include "../commoninclude/physconsts.h"
+#include "../include/ev.h"
+#include "../include/physconsts.h"
 
 using namespace std;
 

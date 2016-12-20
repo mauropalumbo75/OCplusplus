@@ -7,7 +7,7 @@
  * Still to do: handling PARAMETER, magnetism, special features
  */
 
-#include "readtdb.h"
+#include "../include/readtdb.h"
 
 vector<string> tdb_commands {"CONSTITUENT", "ELEMENT", "FUNCTION", "LIST_OF_REFERENCES",
         "PARAMETER", "PHASE", "SPECIES", "TYPE_DEFINITION"};

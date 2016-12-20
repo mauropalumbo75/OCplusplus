@@ -1,5 +1,5 @@
 
-#include "Debye.h"
+#include "../include/Debye.h"
 
 DP UEinstein(DP T, DP TE)
 {

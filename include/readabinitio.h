@@ -16,10 +16,10 @@
 #include<iostream>
 #include<string>
 #include<vector>
-#include "../commoninclude/utils.h"
-#include "../commoninclude/math_utils.h"
-#include "../structures/structure.h"
-#include "../elements/elements.h"
+#include "utils.h"
+#include "math_utils.h"
+#include "structure.h"
+#include "elements.h"
 
 
 struct Composition {

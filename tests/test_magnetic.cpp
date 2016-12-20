@@ -6,7 +6,7 @@
  */
 
 #include <cstdlib>
-#include "magnetic.h"
+#include "../include/magnetic.h"
 
 using namespace std;
 

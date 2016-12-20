@@ -12,17 +12,17 @@
 #ifndef SYSTEMS_H
 #define	SYSTEMS_H
 
-#include "../elements/elements.h"
-#include "../species/species.h"
-#include "../TPfunctions/tpfunctions.h"
-#include "../structures/structure.h"
-#include "../phases/phases.h"
-#include "../References/references.h"
-#include "../Types/types.h"
-#include "../harmonic/harmonic.h"
-#include "../electronic/electronic.h"
-#include "../readabinitio/readabinitio.h"
-#include "../readtdb/readtdb.h"
+#include "elements.h"
+#include "species.h"
+#include "tpfunctions.h"
+#include "structure.h"
+#include "phases.h"
+#include "references.h"
+#include "types.h"
+#include "harmonic.h"
+#include "electronic.h"
+#include "readabinitio.h"
+#include "readtdb.h"
 
 using namespace std;
 

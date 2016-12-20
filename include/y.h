@@ -12,9 +12,9 @@
 
 #include <string>
 #include <set>
-#include "../commoninclude/utils.h"
-#include "../commoninclude/math_utils.h"
-#include "../elements/elements.h"
+#include "../include/utils.h"
+#include "../include/math_utils.h"
+#include "../include/elements.h"
 
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////

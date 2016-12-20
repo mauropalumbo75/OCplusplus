@@ -1,5 +1,5 @@
 
-#include "magnetic.h"
+#include "../include/magnetic.h"
 
 DP g_tau(DP tau, DP p, DP D)
 {

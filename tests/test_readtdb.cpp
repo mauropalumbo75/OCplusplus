@@ -7,7 +7,7 @@
 
 #include <cstdlib>
 #include <vector>
-#include "../readtdb/readtdb.h"
+#include "../include/readtdb.h"
 
 using namespace std;
 
@@ -21,11 +21,12 @@ int main(int argc, char** argv) {
     List_TPfunctions TPfunctions;
     List_phases phases;
     string refs;
+    List_types types;
        
 //    string finput="crfemo.tdb";
     string finput="test.tdb";
 
-    read_tdb_file(elements, species, TPfunctions, phases, refs, finput);
+    read_tdb_file(elements, species, TPfunctions, phases, refs, types, finput);
        
     
     // Open output file

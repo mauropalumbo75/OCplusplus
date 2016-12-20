@@ -9,7 +9,7 @@
 #include <set>
 #include <string>
 
-#include "structure.h"
+#include "../include/structure.h"
 
 
 ostream& operator<<(ostream& os, const Vect3D& v)

@@ -27,8 +27,8 @@
 #include <cmath>
 #include <cstdlib>
 #include <stdexcept>
-#include "../commoninclude/utils.h"
-#include "../commoninclude/math_utils.h"
+#include "utils.h"
+#include "math_utils.h"
 
 #include "/usr/local/include/ginac/ginac.h"   // use the GiNaC library for functions evaluation
                                               // and derivatives

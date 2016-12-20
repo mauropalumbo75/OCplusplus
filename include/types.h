@@ -20,8 +20,8 @@
 #include <iostream>
 #include <sstream>
 #include <cctype>
-#include "../commoninclude/utils.h"
-#include "../commoninclude/math_utils.h"
+#include "../include/utils.h"
+#include "../include/math_utils.h"
 
 
 struct no_such_type { 

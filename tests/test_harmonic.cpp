@@ -6,7 +6,7 @@
  */
 
 #include <cstdlib>
-#include "harmonic.h"
+#include "../include/harmonic.h"
 
 using namespace std;
 

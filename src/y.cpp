@@ -7,7 +7,7 @@
  * 
  */
 
-#include "y.h"
+#include "../include/y.h"
 
 
 ostream& operator<<(ostream& os, const Y& yy)

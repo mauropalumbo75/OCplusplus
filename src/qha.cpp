@@ -5,7 +5,7 @@
  * Created on 05 May 2015, 13:29
  */
 
-#include "qha.h"
+#include "../include/qha.h"
 
 
 DP Thermophys::r(const string var)

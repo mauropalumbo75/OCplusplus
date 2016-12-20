@@ -15,14 +15,14 @@
 #include<iostream>
 #include<string>
 #include<vector>
-#include "../commoninclude/utils.h"
-#include "../commoninclude/math_utils.h"
-#include "../elements/elements.h"
-#include "../species/species.h"
-#include "../TPfunctions/tpfunctions.h"
-#include "../phases/phases.h"
-#include "../References/references.h"
-#include "../Types/types.h"
+#include "utils.h"
+#include "math_utils.h"
+#include "elements.h"
+#include "species.h"
+#include "tpfunctions.h"
+#include "phases.h"
+#include "references.h"
+#include "types.h"
 
 bool get_tdb_line(ifstream& ist, string& line);
         

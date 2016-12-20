@@ -6,7 +6,7 @@
  */
 
 #include <cstdlib>
-#include "Debye.h"
+#include "../include/Debye.h"
 
 using namespace std;
 

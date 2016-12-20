@@ -7,7 +7,7 @@
  * Read phase data info 
  */
 
-#include "phases.h"
+#include "../include/phases.h"
 
 
 void Vec_par::push_back(TPfunction f,int ord)

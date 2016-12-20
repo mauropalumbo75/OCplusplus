@@ -7,8 +7,8 @@
 
 #include <cstdlib>
 #include <vector>
-#include "phases.h"
-#include "../readabinitio/readabinitio.h"
+#include "../include/phases.h"
+#include "../include/readabinitio.h"
 
 using namespace std;
 

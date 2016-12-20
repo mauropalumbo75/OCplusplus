@@ -9,7 +9,7 @@
  */
 
 #include <cstdlib>
-#include "structure.h"
+#include "../include/structure.h"
 
 using namespace std;
 

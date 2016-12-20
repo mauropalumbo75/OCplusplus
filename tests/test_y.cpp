@@ -6,7 +6,7 @@
  */
 
 #include <cstdlib>
-#include "y.h"
+#include "../include/y.h"
 using namespace std;
 
 /*
